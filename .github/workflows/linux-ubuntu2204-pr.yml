@@ -35,8 +35,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./images/linux/ubuntu2204
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64, linux/arm/v7 
           push: false
           tags: |
-            ghcr.io/getpersio/action-virtual-envrionments/ubuntu2204:latest
             ghcr.io/getpersio/action-virtual-envrionment/ubuntu2204:${{github.sha}}
